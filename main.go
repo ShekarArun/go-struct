@@ -15,12 +15,15 @@ type person struct {
 
 func main() {
 	p1 := person{"Arun", "Shekar", 30, contactInfo{"a@a.com", 34}}
-	fmt.Printf("Name: %v %v %+v\n", p1.firstName, p1.lastName, p1.contactInfo)
-	fmt.Println(p1)
+	p1.print()
 
 	p2 := person{firstName: "P2First", lastName: "P2Last", age: 35}
-	fmt.Printf("Person2: %v %v %v\n", p2.firstName, p2.lastName, p2.age)
+	p2.print()
 
 	var p3 person // Go assigns a zero-value to fields in this struct
-	fmt.Println(p3)
+	p3.print()
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
 }
