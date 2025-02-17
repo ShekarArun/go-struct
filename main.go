@@ -7,10 +7,10 @@ type contactInfo struct {
 	zipCode int
 }
 type person struct {
-	firstName   string
-	lastName    string
-	age         int
-	contactInfo contactInfo
+	firstName string
+	lastName  string
+	age       int
+	contactInfo
 }
 
 func main() {
